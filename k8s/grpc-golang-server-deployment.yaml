@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: grpc-server
+spec:
+  selector:
+    matchLabels:
+      app: grpc-server
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: grpc-server
+    spec:
+      containers:
+      - image: 884942771862.dkr.ecr.eu-west-2.amazonaws.com/repository-grpc-server:latest
+        imagePullPolicy: Always
+        name: grpc-server
+        ports:
+        - containerPort: 4040
+          name: grpc-server

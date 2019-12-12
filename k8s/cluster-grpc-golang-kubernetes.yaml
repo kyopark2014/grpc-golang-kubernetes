@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-ksdyb
+  region: eu-west-2
+
+nodeGroups:
+  - name: ng-ksdyb
+    instanceType: t2.medium
+    desiredCapacity: 3
+    minSize: 1
+    maxSize: 8
+    volumeSize: 100
+    ssh:
+      publicKeyPath: ~/.ssh/id_rsa_ksdyb.pub
+    availabilityZones: ["eu-west-2a", "eu-west-2b"]
