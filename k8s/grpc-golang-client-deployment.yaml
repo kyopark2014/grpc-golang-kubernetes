@@ -14,7 +14,7 @@ spec:
         app: grpc-client
     spec:
       containers:
-      - image: 884942771862.dkr.ecr.eu-west-2.amazonaws.com/repository-grpc-client:latest
+      - image: 994942771862.dkr.ecr.eu-west-2.amazonaws.com/repository-grpc-client:latest
         imagePullPolicy: Always
         name: grpc-client
         ports:
