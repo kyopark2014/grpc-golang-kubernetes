@@ -137,7 +137,7 @@ $ protoc --proto_path=proto --proto_path=/usr/local/include/ --go_out=plugins=gr
 
 ```
 
-####[server.proto]
+#### [server.proto]
 
 ```c
 syntax = "proto3";
@@ -160,7 +160,7 @@ service AddService {
 
 ```
 
-####[client.proto]
+#### [client.proto]
 
 ```c
 
@@ -182,8 +182,6 @@ service AddService {
   rpc Multiply(Request) returns (Response);
 }
 ```
-
-
 
 ### Create grpc-server
 Dockerfile
